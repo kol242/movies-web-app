@@ -1,32 +1,13 @@
-import {
-    BadgeCheckIcon,
-    CollectionIcon,
-    HomeIcon,
-    LightningBoltIcon,
-    SearchIcon,
-    UserIcon
-} from '@heroicons/react/outline'
+import { FilmIcon } from '@heroicons/react/outline'
 import Image from 'next/image'
-import HeaderItem from './HeaderItem'
 
 const Header = () => {
   return (
-    <header className="flex flex-col sm:flex-row m-5 justify-between items-center h-auto">
-        <div className="flex flex-grow justify-evenly max-w-2xl">
-            <HeaderItem title='HOME' Icon={HomeIcon}/>
-            <HeaderItem title='TRENDING' Icon={LightningBoltIcon}/>
-            <HeaderItem title='VERIFIED' Icon={BadgeCheckIcon}/>
-            <HeaderItem title='COLLECTIONS' Icon={CollectionIcon}/>
-            <HeaderItem title='SEARCH' Icon={SearchIcon}/>
-            <HeaderItem title='ACCOUNT' Icon={UserIcon}/>
-        </div>
-        <Image 
-            className='object-contain'
-            alt='logo'
-            src='https://links.papareact.com/ua6'
-            width={200}
-            height={100}
-        />
+    <header className="flex flex-col sm:flex-row m-5 justify-start gap-1 items-center h-auto">
+        <FilmIcon className='text-zinc-900 h-12 mb-1 group-hover:animate-bounce '/>
+        <p className="text-4xl text-zinc-900 font-serif underline decoration-sky-500">
+          BestMovies.com
+        </p>
     </header>
   )
 }
